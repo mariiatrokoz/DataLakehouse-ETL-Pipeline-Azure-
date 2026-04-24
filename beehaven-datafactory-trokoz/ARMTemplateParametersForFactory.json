@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "beehaven-datafactory-trokoz"
+		},
+		"BlobStoragebeehaven_trokoz_connectionString": {
+			"value": ""
+		},
+		"DataLakebronze_trokoz_accountKey": {
+			"value": ""
+		},
+		"AzureSynapsetrokoz_properties_typeProperties_endpoint": {
+			"value": "https://synapseanalyticstrokoz.dev.azuresynapse.net"
+		},
+		"DataLakebronze_trokoz_properties_typeProperties_url": {
+			"value": "https://beehavendatalaketrokoz.dfs.core.windows.net/"
+		}
+	}
+}
