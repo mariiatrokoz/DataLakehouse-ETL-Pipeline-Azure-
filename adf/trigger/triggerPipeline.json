@@ -1,0 +1,24 @@
+{
+	"name": "triggerPipeline",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Automation",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2026-04-22T12:05:00",
+				"timeZone": "W. Europe Standard Time"
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"name": "GoldProcessing",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakebronze_trokoz",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "gold/processing",
+				"fileSystem": "beehavendata"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

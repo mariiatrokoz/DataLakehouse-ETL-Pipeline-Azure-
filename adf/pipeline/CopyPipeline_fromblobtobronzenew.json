@@ -1,0 +1,83 @@
+{
+	"name": "CopyPipeline_fromblobtobronzenew",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_FilesFromBlob",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "beehavenblobtrokoz//"
+					},
+					{
+						"name": "Destination",
+						"value": "beehavendata/bronze/new/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
+					},
+					"enableStaging": false,
+					"validateDataConsistency": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "BeeHavenBlob",
+						"type": "DatasetReference",
+						"parameters": {
+							"folder": "*",
+							"file": "*"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "BeeHavenLakeBronzeNew",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-04-23T08:48:59Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

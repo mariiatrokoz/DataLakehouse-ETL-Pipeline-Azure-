@@ -1,0 +1,13 @@
+{
+	"name": "AzureSynapsetrokoz",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSynapseArtifacts",
+		"typeProperties": {
+			"endpoint": "https://synapseanalyticstrokoz.dev.azuresynapse.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/2dd28bd4-1764-4a83-a4a4-cc196e7eaaa9/resourceGroups/bee-haven-resource-group/providers/Microsoft.Synapse/workspaces/synapseanalyticstrokoz"
+		}
+	}
+}

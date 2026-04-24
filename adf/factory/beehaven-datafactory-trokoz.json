@@ -1,0 +1,9 @@
+{
+	"name": "beehaven-datafactory-trokoz",
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e1808879-9319-41c3-bbdd-3709840461a1",
+		"tenantId": "dc0325b5-e792-435c-bbc4-5d675ec5a8c7"
+	}
+}
